@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --port 3000"
+    "start": "webpack-dev-server --hot --inline --port 3000",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -22,8 +23,22 @@
   },
   "homepage": "https://github.com/Min-field/components#readme",
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "css-loader": "^0.28.7",
     "html-webpack-plugin": "^2.30.1",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "vue": "^2.4.3",
+    "vue-loader": "^13.0.4",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"
+  },
+  "dependencies": {
+    "file-loader": "^0.11.2",
+    "vue-router": "^2.7.0",
+    "vue-template-compiler": "^2.4.3"
   }
 }
