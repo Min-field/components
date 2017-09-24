@@ -8,6 +8,7 @@ Vue.use(Router);
 const router = new Router({
     routes
 })
+
 const App = new Vue({
     router,
     render: h => h(app)

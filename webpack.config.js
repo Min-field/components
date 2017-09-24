@@ -23,7 +23,17 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                loader: ['style-loader', 'css-loader', 'sass-loader'],
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options:{
+                            modules: true   // 开启模块css的模块属性，css的类会被打包成一个独一无二的hash值
+                        }
+                    },
+                    'sass-loader'
+                ],
+                // loader: ['style-loader', 'css-loader', 'sass-loader'],
                 include: path.resolve(__dirname, 'src')
             },
             {
